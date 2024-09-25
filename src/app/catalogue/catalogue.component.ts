@@ -199,10 +199,6 @@ export class CatalogueComponent {
     else return [];
   }
 
-  getImageUrl(product: IProduct) {
-    return '/assets/images/robot-parts/' + product.imageName;
-  }
-
   getFilterProducts() {
     return this.filter === ''
       ? this.products
