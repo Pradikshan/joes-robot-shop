@@ -3,11 +3,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 app.use(bodyParser.json());
-/* 
-  IMPORTANT:
-    ***NEVER*** store credentials unencrypted like this.
-    This is for demo purposes only in order to simulate a functioning API serverr.
-*/
+
 const users = {
   "jim@joesrobotshop.com": {
     firstName: "Jim",
