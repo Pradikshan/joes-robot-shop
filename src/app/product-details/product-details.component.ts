@@ -7,7 +7,7 @@ import { IProduct } from '../catalogue/product.model';
   styleUrls: ['./product-details.component.css'],
 })
 export class ProductDetailsComponent {
-  product: IProduct;
+  product!: IProduct;
   getImageUrl(product: IProduct) {
     return '/assets/images/robot-parts/' + product.imageName;
   }
