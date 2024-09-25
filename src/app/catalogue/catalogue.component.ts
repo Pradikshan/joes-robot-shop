@@ -7,8 +7,9 @@ import { IProduct } from './product.model';
   styleUrls: ['./catalogue.component.css'],
 })
 export class CatalogueComponent {
-  products: IProduct[];
+  products: any;
   filter: string = '';
+  cart: IProduct[] = [];
 
   constructor() {
     this.products = [
@@ -188,6 +189,16 @@ export class CatalogueComponent {
     ];
   }
 
+  addToCart(product: IProduct) {
+    this.cart.push(product);
+    console.log(`product ${product.name} added to cart`);
+  }
+
+  getDiscountedClasses(product: IProduct) {
+    if (product.discount > 0) return ['strikethrough'];
+    else return [];
+  }
+
   getImageUrl(product: IProduct) {
     return '/assets/images/robot-parts/' + product.imageName;
   }
@@ -195,6 +206,8 @@ export class CatalogueComponent {
   getFilterProducts() {
     return this.filter === ''
       ? this.products
-      : this.products.filter((product) => product.category === this.filter);
+      : this.products.filter(
+          (product: IProduct) => product.category === this.filter
+        );
   }
 }
