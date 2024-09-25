@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IProduct } from './product.model';
 import { CartService } from '../cart.service';
 
@@ -10,8 +10,9 @@ import { CartService } from '../cart.service';
 export class CatalogueComponent {
   products: any;
   filter: string = '';
+  private cartSvc: CartService = inject(CartService);
 
-  constructor(private cartSvc: CartService) {
+  constructor() {
     this.products = [
       {
         id: 1,
