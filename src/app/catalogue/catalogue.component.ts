@@ -194,10 +194,10 @@ export class CatalogueComponent {
     console.log(`product ${product.name} added to cart`);
   }
 
-  getDiscountedClasses(product: IProduct) {
-    if (product.discount > 0) return ['strikethrough'];
-    else return [];
-  }
+  // getDiscountedClasses(product: IProduct) {
+  //   if (product.discount > 0) return ['strikethrough'];
+  //   else return [];
+  // }
 
   getFilterProducts() {
     return this.filter === ''
