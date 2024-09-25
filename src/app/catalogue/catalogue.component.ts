@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IProduct } from './product.model';
 
 @Component({
   selector: 'bot-catalogue',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./catalogue.component.css'],
 })
 export class CatalogueComponent {
-  product: any;
+  product: IProduct;
 }
