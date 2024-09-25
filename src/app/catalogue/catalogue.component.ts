@@ -7,7 +7,7 @@ import { IProduct } from './product.model';
   styleUrls: ['./catalogue.component.css'],
 })
 export class CatalogueComponent {
-  products: IProduct;
+  products: IProduct[];
 
   constructor() {
     this.products = [
