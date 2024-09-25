@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { IProduct } from './product.model';
 import { CartService } from '../cart.service';
+import { ProductService } from '../catalog/product.service';
 
 @Component({
   selector: 'bot-catalogue',
@@ -12,7 +13,16 @@ export class CatalogueComponent {
   filter: string = '';
   // private cartSvc: CartService = inject(CartService);
 
-  constructor(private cartSvc: CartService) {}
+  constructor(
+    private cartSvc: CartService,
+    private productSvc: ProductService
+  ) {}
+
+  ngOnInit() {
+    this.productSvc.getProducts().subscribe((products) => {
+      this.products = products;
+    });
+  }
 
   addToCart(product: IProduct) {
     this.cartSvc.add(product);
