@@ -8,4 +8,9 @@ export class CartService {
   cart: IProduct[] = [];
 
   constructor() {}
+
+  add(product: IProduct) {
+    this.cart.push(product);
+    console.log(`product ${product.name} added to cart`);
+  }
 }
