@@ -18,5 +18,7 @@ export class ProductDetailsComponent {
     else return [];
   }
 
-  addToCart(product: IProduct) {}
+  buyButtonClicked(product: IProduct) {
+    this.buy.emit();
+  }
 }
