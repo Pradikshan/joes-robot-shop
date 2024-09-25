@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IProduct } from '../catalogue/product.model';
 
 @Component({
@@ -8,6 +8,7 @@ import { IProduct } from '../catalogue/product.model';
 })
 export class ProductDetailsComponent {
   @Input() product!: IProduct;
+  @Output() buy = new EventEmitter();
 
   getImageUrl(product: IProduct) {
     return '/assets/images/robot-parts/' + product.imageName;
