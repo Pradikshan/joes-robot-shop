@@ -9,7 +9,6 @@ import { IProduct } from './product.model';
 export class CatalogueComponent {
   products: any;
   filter: string = '';
-  cart: IProduct[] = [];
 
   constructor() {
     this.products = [
