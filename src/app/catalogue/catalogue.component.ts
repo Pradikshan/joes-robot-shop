@@ -10,9 +10,9 @@ import { CartService } from '../cart.service';
 export class CatalogueComponent {
   products: any;
   filter: string = '';
-  private cartSvc: CartService = inject(CartService);
+  // private cartSvc: CartService = inject(CartService);
 
-  constructor() {
+  constructor(private cartSvc: CartService) {
     this.products = [
       {
         id: 1,
