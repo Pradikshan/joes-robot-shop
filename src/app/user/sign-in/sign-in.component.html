@@ -11,7 +11,7 @@
       placeholder="Email Address"
       type="text"
     />
-    <em class="em.error">Email is required!</em>
+    <em class="em.error" *ngIf="email.invalid">Email is required!</em>
     <input
       name="password"
       required
@@ -20,6 +20,7 @@
       placeholder="Password"
       type="password"
     />
+    <em class="em.error" *ngIf="password.invalid">Password is required!</em>
     <div class="buttons">
       <button type="submit" class="button cta">Sign In</button>
     </div>
