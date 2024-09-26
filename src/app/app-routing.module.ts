@@ -13,7 +13,7 @@ const routes: Routes = [
     title: "Catalogue - Joe's Robot Shop",
   },
   { path: 'cart', component: CartComponent, title: "Cart - Joe's Robot Shop" },
-  {path: 'sign-in', component: SignInComponent}
+  { path: 'sign-in', component: SignInComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
 
