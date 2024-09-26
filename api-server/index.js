@@ -1,8 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require("path");
 
 const app = express();
 app.use(bodyParser.json());
+
+app.use(express.static(path.join(__dirname, "../dist/<angular-project-name>")));
 
 const users = {
   "rust@joesrobotshop.com": {
@@ -238,6 +241,12 @@ app.post("/api/sign-in", (req, res) => {
   } else {
     res.status(401).send("Invalid user credentials.");
   }
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "../dist/<angular-project-name>/index.html")
+  );
 });
 
 app.listen(8081, () => console.log("API Server listening on port 8081!"));
