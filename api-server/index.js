@@ -5,22 +5,21 @@ const app = express();
 app.use(bodyParser.json());
 
 const users = {
-  "jim@joesrobotshop.com": {
-    firstName: "Jim",
-    lastName: "Cooper",
-    email: "jim@joesrobotshop.com",
-    password: "very-secret",
+  "rust@joesrobotshop.com": {
+    firstName: "Rust",
+    lastName: "Cohle",
+    email: "rust@detective.com",
+    password: "idontsleepidream",
   },
-  "joe@joesrobotshop.com": {
-    firstName: "Joe",
-    lastName: "Eames",
-    email: "joe@joesrobotshop.com",
-    password: "super-secret",
+  "steve@joesrobotshop.com": {
+    firstName: "Steve",
+    lastName: "Harrington",
+    email: "steve@upsdiedown.com",
+    password: "helloladies",
   },
 };
 let cart = [];
 
-// use this to add a 1 second delay to all requests
 // app.use(function (req, res, next) {
 //   setTimeout(next, 1000);
 // });
