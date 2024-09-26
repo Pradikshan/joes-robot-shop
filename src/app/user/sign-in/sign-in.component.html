@@ -26,7 +26,13 @@
       >Password is required!</em
     >
     <div class="buttons">
-      <button type="submit" class="button cta">Sign In</button>
+      <button
+        type="submit"
+        [disabled]="signInForm.form.invalid"
+        class="button cta"
+      >
+        Sign In
+      </button>
     </div>
     <div class="signInError" *ngIf="signinError">
       Sign-in failed. Please try again.
