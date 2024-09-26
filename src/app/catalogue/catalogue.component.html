@@ -1,10 +1,30 @@
 <div class="container">
   <div class="filters">
-    <a routerLink="/catalogue/Heads" class="button">Heads</a>
-    <a routerLink="/catalogue/Arms" class="button">Arms</a>
-    <a routerLink="/catalogue/Torsos" class="button">Torsos</a>
-    <a routerLink="/catalogue/Bases" class="button">Bases</a>
-    <a [routerLink]="['/catalogue', '']" class="button">All</a>
+    <a
+      routerLink="/catalogue/"
+      [queryParams]="{ filter: 'Heads' }"
+      class="button"
+      >Heads</a
+    >
+    <a
+      routerLink="/catalogue/"
+      [queryParams]="{ filter: 'Arms' }"
+      class="button"
+      >Arms</a
+    >
+    <a
+      routerLink="/catalogue/"
+      [queryParams]="{ filter: 'Torsos' }"
+      class="button"
+      >Torsos</a
+    >
+    <a
+      routerLink="/catalogue/"
+      [queryParams]="{ filter: 'Bases' }"
+      class="button"
+      >Bases</a
+    >
+    <a routerLink="/catalogue" class="button">All</a>
   </div>
 
   <ul class="products">
