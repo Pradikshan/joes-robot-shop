@@ -5,18 +5,18 @@
     <div class="sub-text">to acquire awesome bots</div>
     <input
       name="email"
+      [(ngModel)]="credentials.email"
       placeholder="Email Address"
       type="text"
     />
     <input
       name="password"
+      [(ngModel)]="credentials.password"
       placeholder="Password"
       type="password"
     />
     <div class="buttons">
-      <button type="submit"class="button cta">
-        Sign In
-      </button>
+      <button type="submit" class="button cta">Sign In</button>
     </div>
   </form>
 </div>
