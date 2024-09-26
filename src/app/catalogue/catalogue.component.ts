@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { IProduct } from './product.model';
 import { CartService } from '../cart/cart.service';
 import { ProductService } from './product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'bot-catalogue',
@@ -15,7 +16,8 @@ export class CatalogueComponent {
 
   constructor(
     private cartSvc: CartService,
-    private productSvc: ProductService
+    private productSvc: ProductService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -26,6 +28,7 @@ export class CatalogueComponent {
 
   addToCart(product: IProduct) {
     this.cartSvc.add(product);
+    this.router.navigate(['/cart']);
   }
 
   // getDiscountedClasses(product: IProduct) {
