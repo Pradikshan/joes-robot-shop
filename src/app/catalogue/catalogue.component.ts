@@ -25,7 +25,9 @@ export class CatalogueComponent {
     this.productSvc.getProducts().subscribe((products) => {
       this.products = products;
     });
-    this.filter = this.route.snapshot.params['filter'];
+    this.route.params.subscribe((params) => {
+      this.filter = params['filter'] ?? '';
+    });
   }
 
   addToCart(product: IProduct) {
